@@ -213,19 +213,29 @@
 // }
 
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-int main(){
-    int num;
-    cin>>num;
-    char arr1[10]={'a','b','c','d','e','f','g','h','i','j'};
-    string s="";
-    while(num!=0){
-        int temp = num%10;
-        s = arr1[temp]+s;
-        num= num/10;
-    }
-    cout<<s<<endl;
-    return 0;
+// int main(){
+//     int num;
+//     cin>>num;
+//     char arr1[10]={'a','b','c','d','e','f','g','h','i','j'};
+//     string s="";
+//     while(num!=0){
+//         int temp = num%10;
+//         s = arr1[temp]+s;
+//         num= num/10;
+//     }
+//     cout<<s<<endl;
+//     return 0;
+// }
+
+int count_numFinger(int n){
+    int r = n%8;
+    if(r==0)
+        return 2;
+    if(r<5)
+        return r;
+    else
+        return 10-r;
 }
